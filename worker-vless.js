@@ -101,7 +101,7 @@ export default {
 					default:
 						// return new Response('Not found', { status: 404 });
 						// For any other path, reverse proxy to 'www.fmprc.gov.cn' and return the original response
-						url.hostname = 'tv.cctv.com';
+						url.hostname = ['www.fmprc.gov.cn', 'tv.cctv.com', 'www.xuexi.cn', 'www.gov.cn', 'mail.gov.cn', 'www.mofcom.gov.cn', 'www.gfbzb.gov.cn', 'www.miit.gov.cn', 'www.12377.cn'];
 						url.protocol = 'https:';
 						request = new Request(url, request);
 						return await fetch(request);
